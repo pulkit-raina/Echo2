@@ -1,0 +1,298 @@
+body{
+background-color: white;
+margin:0;
+}
+
+.first{
+    display:flex;
+    background-color: black;
+    height:100px;
+    margin-bottom:10px;
+}
+
+.logo{
+    margin-left: 20px;;
+    display:flex;
+    align-items: center;
+    margin-right:200px;
+    transition: 0.2s;
+}
+
+.logo:hover{
+    transform: scale(1.2);
+}
+
+.searchbar{
+    display:flex;
+    width:400px;
+    align-items: center;
+    margin-right:100px;
+}
+
+.buttons{
+    display:flex;
+    align-items: center;
+    margin-right: 50px;;
+}
+
+.finalisation-buttons{
+    display:flex;
+    flex:1;
+    align-items: center;
+    justify-content: end;
+}
+
+.echo-logo-image{
+    
+    border-radius:5px;
+    width:80px;
+    height:50px;
+}
+
+.search{
+    font-family: roboto;
+    height:30px;
+    flex:1;
+    border-style: solid;
+    border-color: white;
+    border-width: 2px;
+    /* box-shadow: inset 1px 1px 2px rgba(20, 20, 20, 0.15); */
+    font-size: 20px;
+    border-radius:30px;
+    margin-right:5px;
+    padding-left: 20px;
+    padding-bottom:5px;
+}
+
+.search::placeholder{
+    font-family: roboto;
+    font-weight:bold;
+    font-size:14px;
+    padding-left:15px;
+    padding-bottom:px;
+}
+
+.search-button-image{
+    padding-top:5px;
+    padding-left:1px;
+    width:30px;
+}
+
+.search-button{
+    height:46px;
+    width:46px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: white;
+    border-radius:23px;
+    transition:0.2s;
+    /* box-shadow: inset 1px 1px 2px rgba(20, 20, 20, 0.15); */
+}
+
+.search-button:hover{
+    background-color: white;
+    cursor:pointer;
+    height:50px;
+    width:50px;
+    border-radius:25px;
+}
+
+.products-button{
+    font-size:15px;
+    font-weight:bold;
+    font-family: roboto;
+    color:white;
+    margin-right:30px;
+    transition:0.1s;
+}
+
+.products-button:hover{
+    cursor:pointer;
+    border-bottom: solid 2px;
+    padding-bottom: 8px;
+    border-color: white;
+}
+
+.contactus-button{
+    font-size:15px;
+    font-weight:bold;
+    font-family:roboto;
+    color:white;
+    margin-right:30px;
+    transition:0.1s;
+}
+
+.contactus-button:hover{
+    cursor:pointer;
+    border-bottom: solid 2px;
+    padding-bottom: 8px;
+    border-color: white;
+}
+
+.order-button{
+    font-size:15px;
+    font-weight:bold;
+    font-family:roboto;
+    color:white;
+    transition:0.1s;
+}
+
+.order-button:hover{
+    cursor:pointer;
+    border-bottom: solid 2px;
+    padding-bottom: 8px;
+    border-color: white;
+}
+
+.contactus-button:hover{
+    cursor:pointer;
+}
+
+.wishlist-image{
+    width:50px;
+}
+.cart-image{
+    width: 50px;
+    clip-path: circle();
+}
+
+.wishlist{
+    transition: 0.2s;
+}
+
+.wishlist:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+
+
+.cart{
+    transition: 0.2s;
+}
+
+.cart:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.trust-image{
+    width:1263.5px;
+    height:680px;
+}
+
+.second{
+    position:relative;
+    margin-bottom:100px;
+}
+
+.quality{
+    font-family: roboto;
+    position:absolute;
+    left:80px;
+    top: 500px;
+    color:white;
+    font-size:100px;
+    font-weight:bold;
+    transition:0.7s;
+}
+
+.quality:hover{
+    transform: scale(1.1);
+    
+}
+
+.join-button{
+    font-family: roboto;
+    font-weight: bold;
+    position:absolute;
+    top:630px;
+    left:580px;
+    padding:10px;
+    border-radius: 20px;
+    border-style: solid;
+    border-color:white;
+}
+
+.join-button:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.third{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 10px;
+}
+
+.product{
+    margin-left:2px;
+    margin-right:5px;
+    border-style: solid;
+    height:320px;
+    border-width: 3px;
+    background-color: rgb(249, 251, 252);
+}
+
+.tomato{
+    width:200px;
+    height:150px;
+    border-radius:10px;
+    margin-left:48px;
+    margin-top:20px;
+    border-width:2px;
+    padding:4px;
+    border-color: black;
+    border-style:solid;
+}
+
+.product-class{
+    
+    border-color: white;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.trending{
+    margin-left:520px;
+    width:170px;
+    font-family: roboto;
+    font-weight: bold;
+    padding:10px;
+    border-radius: 20px;
+    border-style: solid;
+    border-color:black;
+    padding-left:15px;
+    margin-bottom: 10px;
+}
+
+.viewsellers-button{
+    font-family: roboto;
+    margin-left:97px;
+    margin-top:20px;
+    padding-left:20px;
+    padding-right:20px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: rgb(185, 177, 177);
+    border-radius: 10px;
+    
+}
+
+.viewsellers-button:hover{
+    cursor: pointer;
+}
+
+.item-name{
+    font-family: roboto;
+    margin-left:125px;
+    margin-top:20px;
+    font-weight: bold;
+}
+
+
+
+
+.products-link{
+    text-decoration: none;
+}

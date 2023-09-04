@@ -1,0 +1,256 @@
+body{
+    background-color: white;
+    margin:0;
+    padding:0;
+}
+
+
+
+.first{
+    display:flex;
+    background-color: black;
+    height:100px;
+    margin-bottom:110px;
+}
+
+.logo{
+    margin-left: 20px;;
+    display:flex;
+    align-items: center;
+    margin-right:200px;
+    transition:0.2s;
+}
+
+.logo:hover{
+    transform: scale(1.2);
+}
+
+.searchbar{
+    display:flex;
+    width:400px;
+    align-items: center;
+    margin-right:100px;
+}
+
+.buttons{
+    display:flex;
+    align-items: center;
+    margin-right: 50px;;
+}
+
+.finalisation-buttons{
+    display:flex;
+    flex:1;
+    align-items: center;
+    justify-content: end;
+}
+
+.echo-logo-image{
+    
+    border-radius:5px;
+    width:80px;
+    height:50px;
+}
+
+.search{
+    font-family: roboto;
+    height:30px;
+    flex:1;
+    border-style: solid;
+    border-color: white;
+    border-width: 2px;
+    /* box-shadow: inset 1px 1px 2px rgba(20, 20, 20, 0.15); */
+    font-size: 20px;
+    border-radius:30px;
+    margin-right:5px;
+    padding-left: 20px;
+    padding-bottom:5px;
+}
+
+.search::placeholder{
+    font-family: roboto;
+    font-weight:bold;
+    font-size:14px;
+    padding-left:15px;
+    padding-bottom:px;
+}
+
+.search-button-image{
+    padding-top:5px;
+    padding-left:1px;
+    width:30px;
+}
+
+.search-button{
+    height:46px;
+    width:46px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: white;
+    border-radius:23px;
+    transition:0.2s;
+    /* box-shadow: inset 1px 1px 2px rgba(20, 20, 20, 0.15); */
+}
+
+.search-button:hover{
+    background-color: white;
+    cursor:pointer;
+    height:50px;
+    width:50px;
+    border-radius:25px;
+}
+
+.products-button{
+    font-size:15px;
+    font-weight:bold;
+    font-family: roboto;
+    color:rgb(192, 136, 136);
+    transform: scale(1.3);
+    margin-right:30px;
+    transition:0.1s;
+    border-bottom: solid 2px;
+}
+
+.products-button:hover{
+    cursor:pointer;
+    border-color: white;
+}
+
+.contactus-button{
+    font-size:15px;
+    font-weight:bold;
+    font-family:roboto;
+    color:white;
+    margin-right:30px;
+    transition:0.1s;
+}
+
+.contactus-button:hover{
+    cursor:pointer;
+    border-bottom: solid 2px;
+    padding-bottom: 8px;
+    border-color: white;
+}
+
+.order-button{
+    font-size:15px;
+    font-weight:bold;
+    font-family:roboto;
+    color:white;
+    transition:0.1s;
+}
+
+.order-button:hover{
+    cursor:pointer;
+    border-bottom: solid 2px;
+    padding-bottom: 8px;
+    border-color: white;
+}
+
+.contactus-button:hover{
+    cursor:pointer;
+}
+
+.wishlist-image{
+    width:50px;
+}
+
+.cart-image{
+    width:65px;
+}
+
+.wishlist{
+    transition: 0.2s;
+}
+
+.wishlist:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+
+
+.cart{
+    transition: 0.2s;
+}
+
+.cart:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.second{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    column-gap: 50px;;
+}
+
+.product{
+    width:1fr;
+    height:350px;
+    align-items:center;
+    padding-left:70px;
+    background-color: white;
+    position:relative;
+    padding-top:10px;
+    border-radius: 30px;
+}
+
+.image{
+    width:250px;
+    height:250px;
+    margin-top:5px;
+    border-radius: 20px;
+    /* border-style: solid;
+    border-color: black;
+    border-width: 3px; */
+}
+
+
+.fruits{
+    position: absolute;
+    color:black;
+    font-size: 40px;
+    top:510px;
+    left:130px;
+    font-weight: bold;
+    font-family: roboto;
+    transition:0.7s;
+}
+
+.fruits:hover{
+    transform: scale(1.2);
+}
+
+.veggies{
+    position: absolute;
+    color:black;
+    font-size: 40px;
+    top:510px;
+    left:565px;
+    font-weight: bold;
+    font-family: roboto;
+    transition:0.7s;
+
+}
+
+.veggies:hover{
+    transform: scale(1.2);
+}
+
+.greens{
+    position: absolute;
+    color:black;
+    font-size: 40px;
+    top:510px;
+    left:1005px;
+    font-weight: bold;
+    font-family: roboto;
+    transition:0.7s;
+}
+
+.greens:hover{
+    transform: scale(1.2);
+}

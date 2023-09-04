@@ -1,0 +1,16 @@
+.elementsDiv{
+    display:flex;  
+}
+
+.elements{
+    margin-top:100px;
+    width:25%;
+    /* border-style: solid; */
+    margin:20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+body{
+    background-color: aliceblue;
+    padding-top:50px;
+}

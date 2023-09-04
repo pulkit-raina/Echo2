@@ -1,0 +1,35 @@
+version: '3'
+services:
+  www:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+  db:
+    image: mysql:latest
+    env_file:
+      - .env
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: "root"
+      MYSQL_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    volumes:
+      - "./Echo_Database/Servers.sql:/docker-entrypoint-initdb.d/Servers.sql"
+  "echo2":
+    image: pulkitraina/echo2
+    ports:
+      - "8081:80"
+    # Add other configuration as needed
+
+  mysql:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+    ports:
+      - "3306:3306"
+    # Add other MySQL configuration as needed
+
+  # Add services for web server and other dependencies
