@@ -23,8 +23,8 @@ jobs:
         run: |
           docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASSWORD
           
-          docker build -t $DOCKERHUB_USERNAME/echo2 .
-          docker push $DOCKERHUB_USERNAME/echo2
+          docker build -t $DOCKERHUB_USERNAME/Echo2 .
+          docker push $DOCKERHUB_USERNAME/Echo2
 
       - name: Deploy MySQL database
         run: |
