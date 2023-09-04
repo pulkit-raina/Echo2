@@ -1,0 +1,40 @@
+name: Deploy to DockerHub
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    env:
+      DOCKERHUB_USERNAME: ${{secrets.DOCKERHUB_USERNAME}}
+      DOCKERHUB_PASSWORD: ${{secrets.DOCKERHUB_PASSWORD}}
+      MYSQL_ROOT_PASSWORD: ${{secrets.MYSQL_ROOT_PASSWORD}}
+      MYSQL_DATABASE: ${{secrets.MYSQL_DATABASE}}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Build and push Docker images
+        run: |
+          docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASSWORD
+          
+          docker build -t $DOCKERHUB_USERNAME/echo2 .
+          docker push $DOCKERHUB_USERNAME/echo2
+
+      - name: Deploy MySQL database
+        run: |
+          docker run -d --name mysql-container -e MYSQL_ROOT_PASSWORD=$MYSQL_ROOT_PASSWORD -e MYSQL_DATABASE=$MYSQL_DATABASE -p 3306:3306 mysql:latest
+
+      - name: Clean up old containers
+        run: |
+          docker ps -aq | xargs docker stop
+          docker ps -aq | xargs docker rm
+
+      - name: Start Docker Compose
+        run: |
+          MYSQL_ROOT_PASSWORD=$MYSQL_ROOT_PASSWORD MYSQL_DATABASE=$MYSQL_DATABASE docker-compose -f docker-compose.yml up -d
