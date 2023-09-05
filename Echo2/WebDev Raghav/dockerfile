@@ -1,16 +1,22 @@
-# Use an official PHP and Apache runtime as a parent image
+# Use an official PHP runtime as a parent image
 FROM php:7.4-apache
 
 # Set the working directory in the container
 WORKDIR /var/www/html
 
-# Copy all project files into the container
-COPY . /var/www/html/
+# Copy the application code into the container
+COPY . .
 
-# Expose port 80 (the default for Apache)
+# If you have dependencies, you can install them here (e.g., Composer for PHP)
+# RUN composer install
+
+# Make sure Apache serves the PHP files and other assets correctly
+# Enable Apache modules and configure the virtual host
+RUN a2enmod rewrite && service apache2 restart
+COPY apache-config.conf /etc/apache2/sites-available/000-default.conf
+
+# Expose port 80 for Apache
 EXPOSE 80
 
-ENV port = 80
-
-# Start the Apache server
+# Define the command to start Apache (which serves your PHP application)
 CMD ["apache2-foreground"]
