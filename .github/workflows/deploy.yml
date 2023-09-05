@@ -14,24 +14,10 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Login to Docker Hub
-        run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+        run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_ACCESS_TOKEN  }}
 
       - name: Build and Push Docker Image
         run: |
-          cd Webdev-Darshan  # Change to the correct directory
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/webdev-darshan:latest .
-          docker push ${{ secrets.DOCKER_USERNAME }}/webdev-darshan:latest
-          cd ..
-          cd Webdev-Pulkit  # Change to the correct directory
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/webdev-pulkit:latest .
-          docker push ${{ secrets.DOCKER_USERNAME }}/webdev-pulkit:latest
-          cd ..
-          cd Webdev-Rachit  # Change to the correct directory
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/webdev-rachit:latest .
-          docker push ${{ secrets.DOCKER_USERNAME }}/webdev-rachit:latest
-          cd ..
-          cd Webdev-Raghav  # Change to the correct directory
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/webdev-raghav:latest .
-          docker push ${{ secrets.DOCKER_USERNAME }}/webdev-raghav:latest
-          cd ..
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/webdev:latest .
+          docker push ${{ secrets.DOCKER_USERNAME }}/webdev:latest
           
